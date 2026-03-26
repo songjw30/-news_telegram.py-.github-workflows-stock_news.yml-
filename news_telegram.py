@@ -49,7 +49,7 @@ def fetch_news(stock_name, query):
 
     KST = timezone(timedelta(hours=9))
     now = datetime.now(KST)
-    cutoff = now - timedelta(hours=1)  # 최근 1시간
+    cutoff = now - timedelta(hours=24)  # 최근 24시간
 
     news_list = []
     for entry in feed.entries[:10]:  # 최대 10개만 확인
